@@ -53,7 +53,7 @@ export class Timer extends React.Component {
 
         return(
             <div>
-                <h1 className="page-title">Countdown</h1>
+                <h1 className="page-title">Timer</h1>
                 <Clock totalSeconds={count}/>
                 <Controls countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
             </div> 
