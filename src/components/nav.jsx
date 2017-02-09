@@ -8,7 +8,7 @@ export let Nav = (props) => {
                 <ul className="menu">
                     <li className="menu-text">React Timer App</li>
                     <li><IndexLink to="/" activeClassName="link-active">Timer</IndexLink></li>
-                    <li><Link to="/" activeClassName="link-active">Countdown</Link></li>
+                    <li><Link to="countdown" activeClassName="link-active">Countdown</Link></li>
                 </ul>
             </div>
             <div className="top-bar-right">
