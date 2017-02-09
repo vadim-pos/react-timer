@@ -13,6 +13,8 @@ export class Countdown extends React.Component {
         };
     }
 
+    timer = undefined;
+
     componentWillUnmount = () => {
         clearInterval(this.timer);
         this.timer = undefined;
