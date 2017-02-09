@@ -7,7 +7,7 @@
     "start": "node server.js",
     "dev": "./node_modules/.bin/webpack-dev-server",
     "build": "webpack --env.prod=true",
-    "test" : "karma start"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "karma-webpack": "^2.0.2",
     "mocha": "^3.2.0",
     "node-sass": "^4.5.0",
+    "react-addons-test-utils": "^15.4.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",

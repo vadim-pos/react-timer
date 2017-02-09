@@ -1,13 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
 
-module.exports = (prod) => {
-	const NODE_ENV = prod ? 'production' : 'development';
+module.exports = (env) => {
+	const NODE_ENV = env && env.prod ? 'production' : 'development';
 	let onProduction = NODE_ENV === 'production';
 	
 	let plugins = [
 		new webpack.DefinePlugin({
-			'process.env': { NODE_ENV: JSON.stringify(NODE_ENV) } // TEST ES2015
+			'process.env': { NODE_ENV: JSON.stringify(NODE_ENV) }
 		}),
 		new webpack.ProvidePlugin({
 			'$': 'jquery',
