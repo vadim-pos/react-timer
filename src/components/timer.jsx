@@ -8,7 +8,7 @@ export class Timer extends React.Component {
         super(props);
         this.state = {
             count: 0,
-            countdownStatus: 'paused'
+            timerStatus: 'paused'
         }
     }
 
@@ -20,13 +20,13 @@ export class Timer extends React.Component {
     }
 
     componentDidUpdate = (prevProps, prevState) => {
-        if (this.state.countdownStatus !== prevState.countdownStatus) {
-            switch (this.state.countdownStatus) {
+        if (this.state.timerStatus !== prevState.timerStatus) {
+            switch (this.state.timerStatus) {
                 case 'started':
                     this.startTimer();
                     break;
                 case 'stopped':
-                    this.setState({count: 0, countdownStatus: 'paused'});
+                    this.setState({count: 0, timerStatus: 'paused'});
                 case 'paused':
                     clearInterval(this.timer);
                     this.timer = undefined;
@@ -36,7 +36,7 @@ export class Timer extends React.Component {
     }
 
     handleStatusChange = (newStatus) => {
-        this.setState({countdownStatus: newStatus});
+        this.setState({timerStatus: newStatus});
     }
 
     startTimer = () =>{
@@ -49,13 +49,13 @@ export class Timer extends React.Component {
     }
 
     render() {
-        let {count, countdownStatus} = this.state;
+        let {count, timerStatus} = this.state;
 
         return(
             <div>
                 <h1 className="page-title">Timer</h1>
                 <Clock totalSeconds={count}/>
-                <Controls countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
+                <Controls countdownStatus={timerStatus} onStatusChange={this.handleStatusChange}/>
             </div> 
         );
     }

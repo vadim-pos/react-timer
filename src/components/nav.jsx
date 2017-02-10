@@ -13,7 +13,7 @@ export let Nav = (props) => {
             </div>
             <div className="top-bar-right">
                 <ul className="menu">
-                    <li><a href="#" target="_blank">Github</a></li>
+                    <li><a href="https://github.com/vadim-pos/react-timer" target="_blank">Github</a></li>
                 </ul>
             </div>
         </nav>
