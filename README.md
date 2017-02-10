@@ -1,2 +1,2 @@
-React app boilerplate with foundation & jquery
-Ready for Heroku deploy 
+## Simple react timer/countdown app
+[Heroku](http://desolate-shore-52384.herokuapp.com/#/)
